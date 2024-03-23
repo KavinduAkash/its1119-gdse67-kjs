@@ -5,17 +5,84 @@
     <title>Javascript</title>
 </head>
 <body>
-<h1>Console object in JS</h1>
+<h1> String methods in JS</h1>
 
 
 <script>
 
-    console.log("Hello");
-    console.error("Hello");
-    console.warn("Hello");
-    console.info("Hello");
-    // console.clear();
-    console.table({ id:1, name:'Kavindu', age:28 });
+    // string methods in js
+    let str = "Hello world!";
+
+    // let x = str.charAt(6);
+    // console.log(x);
+
+    // str.charCodeAt(0); // unicode value of the character
+
+    // let str1 = "IJSE";
+    // let str2 = "LK";
+    //
+    // str1.concat(str2); // IJSELK
+    // str1.concat(" ", str2); // IJSE LK
+    // str1.concat("-", str2); // IJSE-LK
+    // str1.concat("-", str2, "- Sri Lanka"); // IJSE-LK-Sri Lanka
+    // str1.concat("-", str2, "- Sri Lanka", ", ", "Asia"); // IJSE-LK-Sri Lanka, Asia
+
+    // let x1 = "https://ijse.lk";
+    // x1.startsWith("https"); // true
+    // x1.startsWith("httpx"); // false
+
+    // x1.endsWith(".lk"); // true
+    // x1.endsWith("com"); // false
+    // x1.endsWith("e.lk"); // true
+
+    // String.fromCharCode(72); // 'H'
+    // String.fromCharCode(101); // 'e'
+    // String.fromCharCode(108); // 'l'
+
+    // str.includes("Hello"); //true
+    // str.includes("world"); //true
+    // str.includes(" "); //true
+    // str.includes("!"); //true
+    // str.includes("ijse"); //false
+    // str.includes("lanka"); //false
+    // str.includes("ll"); //true
+    // str.includes("ol"); //false
+    // str.includes("rl"); //true
+
+    // str.indexOf("world"); //6
+    // str.indexOf("H"); //0
+    // str.indexOf("He"); //0
+    // str.indexOf("o"); //4
+    // str.lastIndexOf("o"); //7
+
+    // let xyz = str.match(/o/g); // ['o', 'o']
+    // console.log(xyz);
+    // console.log(str.match(/o/g));
+
+    let str5 = "java,python,go";
+    // str5.replace(",", "/"); // 'java/python,go'
+    // str5.replaceAll(",", "/"); // 'java/python/go'
+
+    // str5.search("go"); // 12
+    // str5.search("a"); // 1
+    // str5.search("ka"); // -1 ( Not found )
+
+    // str5.slice(5); // 'python,go'
+    // str5.slice(8); // 'hon,go'
+    // str5.slice(5, 10); // 'pytho'
+
+    let str6 = "JavaScript";
+    // str6.toUpperCase(); // 'JAVASCRIPT'
+    // str6.toLowerCase(); // 'javascript'
+
+    // let str7 = " kavindu@ijse.lk ";
+    // str7.trim(); // 'kavindu@ijse.lk'
+
+    // var str8 = new String("hello");
+    // str8.valueOf(); // 'hello'
+
+
+
 </script>
 
 
