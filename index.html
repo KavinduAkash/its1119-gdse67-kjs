@@ -5,16 +5,58 @@
     <title>Javascript</title>
 </head>
 <body>
-<h1>Apply JS in HTML</h1>
+<h1>Variables in HTML</h1>
 
 <!-- in code -->
 <script>
-    // write here
-    console.log("Hello JS");
+
+    var myVariable = "IJSE";
+    console.log("My Variable: ", myVariable);
+
+    myVariable = 2;
+    console.log("My Variable: ", myVariable);
+
+    myVariable = true;
+    console.log("My Variable: ", myVariable);
+
+    myVariable = null;
+    console.log("My Variable: ", myVariable);
+
+    myVariable = undefined;
+    console.log("My Variable: ", myVariable);
+
+    // ------------------------
+
+    var x = "hello";
+    var _x = "hello";
+    var $x = "hello";
+    // var 4x = "hello"; // variable name can't start with a number
+    var x4 = "hello";
+
+    {
+        var y = "Welcome to IJSE";
+        console.log("Y-01: ", y);
+        y = "Welcome to SE";
+        console.log("Y-01: ", y);
+
+        let y1 = "Welcome to IJSE";
+        console.log("Y-01: ", y1);
+        y1 = "Welcome to SE";
+        console.log("Y-01: ", y1);
+
+        const y2 = "Welcome to IJSE";
+        console.log("Y-01: ", y2);
+        // y2 = "Welcome to SE"; // can't re-assign
+        console.log("Y-01: ", y2);
+    }
+
+    console.log("Y-02: ", y);
+    console.log("Y-02: ", y1);
+    console.log("Y-02: ", y2);
+
+
 </script>
 
-<!-- plug external js file (.js) -->
-<script src="js/script.js"></script>
 
 </body>
 </html>
