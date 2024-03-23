@@ -5,83 +5,63 @@
     <title>Javascript</title>
 </head>
 <body>
-<h1> String methods in JS</h1>
+<h1>Operators in JS</h1>
 
 
 <script>
+    /*
+    Arithmetic Operators
+    --------------------
+    Addition (+): Adds two values together.
+    Subtraction (-): Subtracts one value from another.
+    Multiplication (*): Multiplies two values.
+    Division (/): Divides one value by another.
+    Modulo (%): Returns the remainder of the division.
+     */
 
-    // string methods in js
-    let str = "Hello world!";
+    /*
+    Assignment Operators
+    --------------------
+    Assignment (=): Assigns a value to a able.
+    Addition assignment (+=): Adds a value to a able and assigns the result to the able.
+    Subtraction assignment (-=): Subtracts a value from a able and assigns the result to the able.
+    Multiplication assignment (*=): Multiplies a able by a value and assigns the result to the able.
+    Division assignment (/=): Divides a able by a value and assigns the result to the able.
+    Modulo assignment (%=): Calculates the remainder of the division and assigns the result to the able.
+    */
 
-    // let x = str.charAt(6);
-    // console.log(x);
+    let a = 2;
+    let b = 3;
+    let c = 4;
 
-    // str.charCodeAt(0); // unicode value of the character
+    var x = a + b;
+    console.log(x); // 5
 
-    // let str1 = "IJSE";
-    // let str2 = "LK";
-    //
-    // str1.concat(str2); // IJSELK
-    // str1.concat(" ", str2); // IJSE LK
-    // str1.concat("-", str2); // IJSE-LK
-    // str1.concat("-", str2, "- Sri Lanka"); // IJSE-LK-Sri Lanka
-    // str1.concat("-", str2, "- Sri Lanka", ", ", "Asia"); // IJSE-LK-Sri Lanka, Asia
+    x = b - a;
+    console.log(x); // a
 
-    // let x1 = "https://ijse.lk";
-    // x1.startsWith("https"); // true
-    // x1.startsWith("httpx"); // false
+    x = a * b;
+    console.log(x); // 6
 
-    // x1.endsWith(".lk"); // true
-    // x1.endsWith("com"); // false
-    // x1.endsWith("e.lk"); // true
+    x = b / a;
+    console.log(x); // 1.5
 
-    // String.fromCharCode(72); // 'H'
-    // String.fromCharCode(101); // 'e'
-    // String.fromCharCode(108); // 'l'
+    x = b % a;
+    console.log(x); // 1
 
-    // str.includes("Hello"); //true
-    // str.includes("world"); //true
-    // str.includes(" "); //true
-    // str.includes("!"); //true
-    // str.includes("ijse"); //false
-    // str.includes("lanka"); //false
-    // str.includes("ll"); //true
-    // str.includes("ol"); //false
-    // str.includes("rl"); //true
+    x = c % a;
+    console.log(x); // 0
 
-    // str.indexOf("world"); //6
-    // str.indexOf("H"); //0
-    // str.indexOf("He"); //0
-    // str.indexOf("o"); //4
-    // str.lastIndexOf("o"); //7
-
-    // let xyz = str.match(/o/g); // ['o', 'o']
-    // console.log(xyz);
-    // console.log(str.match(/o/g));
-
-    let str5 = "java,python,go";
-    // str5.replace(",", "/"); // 'java/python,go'
-    // str5.replaceAll(",", "/"); // 'java/python/go'
-
-    // str5.search("go"); // 12
-    // str5.search("a"); // 1
-    // str5.search("ka"); // -1 ( Not found )
-
-    // str5.slice(5); // 'python,go'
-    // str5.slice(8); // 'hon,go'
-    // str5.slice(5, 10); // 'pytho'
-
-    let str6 = "JavaScript";
-    // str6.toUpperCase(); // 'JAVASCRIPT'
-    // str6.toLowerCase(); // 'javascript'
-
-    // let str7 = " kavindu@ijse.lk ";
-    // str7.trim(); // 'kavindu@ijse.lk'
-
-    // var str8 = new String("hello");
-    // str8.valueOf(); // 'hello'
-
-
+    a+=5; // a = a + 5
+    console.log(a); // 7
+    a-=2; // a = a - 2
+    console.log(a); // 5
+    a*=2; // a = a * 2
+    console.log(a); // 10
+    a/=2; // a = a / 2
+    console.log(a); // 5
+    a%=2; // a = a % 2
+    console.log(a); // 1
 
 </script>
 
