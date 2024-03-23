@@ -5,55 +5,43 @@
     <title>Javascript</title>
 </head>
 <body>
-<h1>Variables in HTML</h1>
+<h1>Data Types in HTML</h1>
 
-<!-- in code -->
+
 <script>
 
-    var myVariable = "IJSE";
-    console.log("My Variable: ", myVariable);
+    var x = "Hello";
+    console.log(typeof x); // string
 
-    myVariable = 2;
-    console.log("My Variable: ", myVariable);
+    x = 10;
+    console.log(typeof x); // number
 
-    myVariable = true;
-    console.log("My Variable: ", myVariable);
+    x = 10.5;
+    console.log(typeof x); // number
 
-    myVariable = null;
-    console.log("My Variable: ", myVariable);
+    x = true;
+    console.log(typeof x); // boolean
 
-    myVariable = undefined;
-    console.log("My Variable: ", myVariable);
+    x = undefined;
+    console.log(typeof x); // undefined
 
-    // ------------------------
+    x = null;
+    console.log(typeof x); // object
 
-    var x = "hello";
-    var _x = "hello";
-    var $x = "hello";
-    // var 4x = "hello"; // variable name can't start with a number
-    var x4 = "hello";
+    x = Symbol("foo");
+    console.log(typeof x); // symbol
 
-    {
-        var y = "Welcome to IJSE";
-        console.log("Y-01: ", y);
-        y = "Welcome to SE";
-        console.log("Y-01: ", y);
+    x = BigInt("1231231231231");
+    console.log(typeof x); // bigint
 
-        let y1 = "Welcome to IJSE";
-        console.log("Y-01: ", y1);
-        y1 = "Welcome to SE";
-        console.log("Y-01: ", y1);
+    x = {};
+    console.log(typeof x); // object
 
-        const y2 = "Welcome to IJSE";
-        console.log("Y-01: ", y2);
-        // y2 = "Welcome to SE"; // can't re-assign
-        console.log("Y-01: ", y2);
-    }
+    x = [];
+    console.log(typeof x); // object
 
-    console.log("Y-02: ", y);
-    console.log("Y-02: ", y1);
-    console.log("Y-02: ", y2);
-
+    x = function () {};
+    console.log(typeof x); // function
 
 </script>
 
