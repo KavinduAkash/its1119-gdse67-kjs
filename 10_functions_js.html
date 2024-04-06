@@ -1,10 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Javascript</title>
 </head>
 <body>
+<h1>Function in JS</h1>
+
+<script>
+
+
+  // Named Function
+  function myFunction() {
+    // body
+    console.log("Welcome to the function");
+  }
+
+  myFunction();
+
+  function myFunction2(param1, param2) {
+    console.log("param1 + param2 = ", param1 + param2);
+  }
+
+  myFunction2(1, 2);
+  myFunction2();
+
+  // Function Expressions
+  var myFunction3 = function() {
+    console.log("Welcome to myFunction3");
+  }
+
+  myFunction3();
+
+  var myFunction4 = function(param1, param2) {
+    console.log("param1 + param2 = ", param1 + param2);
+  }
+
+  myFunction4(5, 6);
+
+  // arrow functions
+  var arrowFunction = () => {
+    console.log("Welcome to arrow function");
+  }
+
+  arrowFunction();
+
+  var arrowFunction2 = (param1, param2) => {
+    console.log("param1 + param2 = ", param1 + param2);
+  }
+
+  arrowFunction2(10, 20);
+
+  // Anonymous Function
+  (function() {
+    console.log("I'm an Anonymous Function")
+  })
+
+  // callback functions
+
+  function callback() {
+    console.log("Hello! I'm the call back function");
+  }
+
+  function callback2() {
+    console.log("Hello! I'm the call back function 2");
+  }
+
+  function process(param) {
+    param();
+  }
+
+  // process(callback());
+  process(callback2());
+
+
+</script>
 
 </body>
 </html>
