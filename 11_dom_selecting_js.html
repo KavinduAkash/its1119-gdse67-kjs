@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+</head>
+<body>
+
+<h1>DON2</h1>
+<h1>DON3</h1>
+<h1 class="myClass">DON4</h1>
+
+<p id="myId1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid assumenda consectetur consequuntur culpa doloribus earum eius error, harum ipsa, magnam modi mollitia nesciunt, nihil nobis non officiis quaerat quia.</p>
+<p id="myId2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid assumenda consectetur consequuntur culpa doloribus earum eius error, harum ipsa, magnam modi mollitia nesciunt, nihil nobis non officiis quaerat quia.</p>
+
+<p class="myClass">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cumque doloribus explicabo ipsum laborum officia quidem, unde! Id incidunt nemo nesciunt sint vero? Consequuntur doloribus exercitationem in itaque odio unde.
+</p>
+
+<p name="hello">IJSE-Institute Of Software Engineering</p>
+<h1>Hello!</h1>
+<div name="hello">JavaScript</div>
+
+
+<ul>
+    <li>Java</li>
+    <li>Python</li>
+    <li>Go</li>
+</ul>
+
+<script>
+
+    /*
+    * Element Selectors in JS (Select DOM)
+    * ------------------------------------
+    * 1) const element = document.getElementById('elementId');
+    * 2) const elements = document.getElementsByClassName('className');
+    * 3) const elements = document.getElementsByTagName('tagname');
+    * 4) const element = document.querySelector('selector');
+    * 5) const elements = document.getElementsByName('nameAttribute');
+    * 6) const elements = document.querySelectorAll('[attribute="value"]');
+    * */
+
+    var results = document.getElementsByTagName("h1");
+    console.log('results: ', results[0].innerText);
+    console.log('results: ', results[1].innerText);
+    console.log('results: ', results[2].innerText);
+
+    results[0].innerText = 'hiiii';
+    results[1].innerHTML = '<i>hiiii</i>';
+
+    document.getElementById("myId1").innerText = "Welcome to Software Engineering";
+    document.getElementsByClassName("myClass")[0].innerText = "Hello World!";
+
+    document.getElementsByName("hello"); // name="hello"
+
+    document.querySelector("div"); // <div name="hello" fname="adadsa">JavaScript</div>
+    document.querySelector("p"); // <p id="myId1">Welcome to Software Engineering</p>
+    document.querySelector("#myId"); // null
+    document.querySelector("#myId1"); // <p id="myId1">Welcome to Software Engineering</p>
+    document.querySelector(".myClass"); // <h1 class="myClass">Hello World!</h1>
+    document.querySelector("[name]"); // <p name="hello">IJSE-Institute Of Software Engineering</p>
+    document.querySelector("p"); // <p id="myId1">Welcome to Software Engineering</p>
+
+    document.querySelectorAll("p"); // select all <p> in the DOM
+
+    document.querySelectorAll("ul>li"); // [li , li, li]
+    document.querySelectorAll("ul>li:first-child");
+    document.querySelectorAll("ul>li:last-child");
+    document.querySelectorAll("ul>li:nth-child(2)");
+
+</script>
+
+</body>
+</html>
