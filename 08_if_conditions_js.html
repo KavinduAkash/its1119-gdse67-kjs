@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript</title>
+</head>
+<body>
+<h1>If Condition in JS</h1>
+
+
+<script>
+
+  /*
+       if(// condition ) {
+           // if true
+       } else {
+           // if false
+       }
+  */
+
+  /*
+       if(// condition 01 ) {
+
+           // if true condition 01
+
+       } else if( // condition 02 ) {
+
+           // if true condition 02
+
+       } else {
+           // if false
+       }
+  */
+
+
+  let a = 12;
+  let b = 35;
+  let c = 100;
+
+  if(a > b) {
+    if(a > c) {
+      console.log(`a is the max number`);
+    } else {
+      console.log(`c is the max number`);
+    }
+  } else {
+    if(b > c) {
+      console.log(`b is the max number`);
+    } else {
+      console.log(`c is the max number`);
+    }
+  }
+
+  // ---------------------------
+  /*
+   if(condition) {
+
+   } else if(condition) {
+
+   } else if(condition) {
+
+   } else {
+
+   }
+   */
+
+
+  var x = 10;
+
+  if(x > 5) {
+    console.log("OK");
+  } else {
+    console.log("No");
+  }
+
+  var result = (x > 5) ? "OK" : "No";
+  console.log("result: ", result);
+
+</script>
+
+
+</body>
+</html>
