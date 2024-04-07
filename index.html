@@ -3,68 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Javascript</title>
+
 </head>
 <body>
-<h1>Operators in JS</h1>
 
+<h1>Arrays</h1>
 
 <script>
-    /*
-    Arithmetic Operators
-    --------------------
-    Addition (+): Adds two values together.
-    Subtraction (-): Subtracts one value from another.
-    Multiplication (*): Multiplies two values.
-    Division (/): Divides one value by another.
-    Modulo (%): Returns the remainder of the division.
-     */
 
-    /*
-    Assignment Operators
-    --------------------
-    Assignment (=): Assigns a value to a able.
-    Addition assignment (+=): Adds a value to a able and assigns the result to the able.
-    Subtraction assignment (-=): Subtracts a value from a able and assigns the result to the able.
-    Multiplication assignment (*=): Multiplies a able by a value and assigns the result to the able.
-    Division assignment (/=): Divides a able by a value and assigns the result to the able.
-    Modulo assignment (%=): Calculates the remainder of the division and assigns the result to the able.
-    */
+    var array1 = [];
+    var array2 = [1, 2, 3, 4, 5, 6, 7];
+    var array3 = [1, 2, 3, "hello", 5, true, function () {}];
 
-    let a = 2;
-    let b = 3;
-    let c = 4;
+    // console.log(array2[5]); // 6
 
-    var x = a + b;
-    console.log(x); // 5
+    var numArray = [25, 38, 15, 20, 100, 99, 250, 60];
 
-    x = b - a;
-    console.log(x); // a
+    function findMax(array) {
+        let max = array[0];
+        for (var i=1; i<array.length; i++) {
+            if(max<array[i]) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
 
-    x = a * b;
-    console.log(x); // 6
-
-    x = b / a;
-    console.log(x); // 1.5
-
-    x = b % a;
-    console.log(x); // 1
-
-    x = c % a;
-    console.log(x); // 0
-
-    a+=5; // a = a + 5
-    console.log(a); // 7
-    a-=2; // a = a - 2
-    console.log(a); // 5
-    a*=2; // a = a * 2
-    console.log(a); // 10
-    a/=2; // a = a / 2
-    console.log(a); // 5
-    a%=2; // a = a % 2
-    console.log(a); // 1
+    var max = findMax(numArray);
+    console.log(max);
 
 </script>
-
 
 </body>
 </html>
