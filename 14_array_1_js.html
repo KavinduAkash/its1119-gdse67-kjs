@@ -32,6 +32,19 @@
     var max = findMax(numArray);
     console.log(max);
 
+    function findMax2(arr) {
+        let max = arr[0];
+        arr.map((item, index) => {
+            if(item>max) {
+                max = item;
+            }
+        })
+        return max;
+    }
+
+    let rs = findMax2(numArray);
+    console.log("MAX Number: ", rs);
+
 </script>
 
 </body>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Javascript</title>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
 
 </head>
 <body>
@@ -11,19 +11,119 @@
 
 <script>
 
-  var array = [];
-  array.push(1); // add item to the end of the array
-  console.log(array); // [1]
+    var array = [];
+    array.push(1); // add item to the end of the array
+    console.log(array); // [1]
 
-  array.push("Hello");
-  console.log(array); // [1, "Hello"]
+    array.push("Hello");
+    console.log(array); // [1, "Hello"]
 
-  array.push(true);
-  console.log(array); // [1, "Hello", true]
+    array.push(true);
+    console.log(array); // [1, "Hello", true]
 
-  // array.pop(); // remove last item of the array
-  console.log(array); // [1, "Hello"]
+    // array.pop(); // remove last item of the array
+    // console.log(array); // [1, "Hello"]
 
+    // array.shift(); // remove the first item of the array
+    // console.log(array); // ["Hello", true]
+
+    array.unshift("welcome"); // add an item to start
+    console.log(array); // ["welcome", 1, "Hello", true]
+
+    array.unshift("javascript", false, 2000);
+    console.log(array); // ["javascript", false, 2000, "welcome", 1, "Hello", true]
+
+    var array1 = [1, 2, 3];
+    var array2 = [4, 5, 6, 7, 8];
+
+    var newArray1 = array1.concat(array2); // [1, 2, 3, 4, 5, 6, 7, 8]
+    var newArray2 = array2.concat(array1); // [4, 5, 6, 7, 8, 1, 2, 3]
+
+    newArray1.slice(2); // [3, 4, 5, 6, 7, 8]
+    newArray1.slice(-1); // [8]
+    newArray1.slice(-3); // [6, 7, 8]
+    newArray1.slice(2, 6); // [3, 4, 5, 6]
+
+    var arr1 = ["cat1", "cat2", "cat3", "cat4", "cat5", "cat6", "cat7", "cat8"];
+    // arr1.splice(2, 2); // arr1 -> [cat1, cat2, cat5, cat6, cat7, cat8]
+    // arr1.splice(2, 2, "hello1", "hello2"); // arr1 -> [cat1, cat2, hello1, hello2, cat5, cat6, cat7, cat8]
+
+
+    // update a specific array item index
+    arr1[1] = "hello"; // arr1 -> ["cat1", "hello", "cat3", "cat4", "cat5", "cat6", "cat7", "cat8"]
+
+    var arr2 = ['cat1', 'cat2', 'cat3', 'cat4', 'cat5', 'cat6', 'cat7', 'cat8', 'cat3', 'cat9', 'cat10'];
+    arr2.indexOf('cat3'); // 2 -> Returns the first index at which a given element can be foundin the array.
+    arr2.lastIndexOf('cat3'); // 8 -> Returns the last index at which a given element can be foundin the array.
+
+    // Determines whether an array includes a certain value among itsentries.
+    arr1.includes("cat5"); // true
+    arr1.includes("cat3"); // true
+    arr1.includes("cat11"); // false
+
+    // -----------------------------
+
+    var numberArray = [100, 221, 719, 80, 2100, 75, 6, 8000];
+
+    // const findOddNumbers = (array) => {
+    //     let arr = [];
+    //     for (let i=0; i<array.length; i++) {
+    //         if(array[i]%2>0) {
+    //             arr.push(array[i]);
+    //         }
+    //     }
+    //     return arr;
+    // }
+
+    // var oddNumbersArray = findOddNumbers(numberArray);
+    // console.log("ODD: ", oddNumbersArray);
+
+    /*
+    var result = numberArray.filter(function (item) {
+        return item%2>0;
+    });
+  console.log("RESULTS: ", result);
+     */
+
+    numberArray.map(item => {
+        console.log(item);
+    })
+
+    numberArray.map((item, index) => {
+        console.log(index + " : " + item);
+    })
+
+    numberArray.forEach(function (item) {
+        console.log("forEach: ", item);
+    })
+
+    var myArray = [20, 10, 40, 30, 15];
+    myArray.sort(); // sort the array -> [10, 15, 20, 30, 40]
+
+    myArray.reverse(); // reverse the array -> [40, 30, 20, 15, 10]
+
+    // Tests whether at least one element in the array passes thetest implemented by the provided function
+    myArray.some((item) => {
+        return item%2>0;
+    }); // true
+
+    // Tests whether all elements in the array pass the condition implemented by the provided function.
+    myArray.every((item) => {
+        return item%2>0;
+    }) // false
+    myArray.every((item) => {
+        return item>5;
+    }) // true
+
+    // Joins all elements of an array into a string.
+    myArray.join("") // '4030201510'
+    myArray.join(",") // '40,30,20,15,10'
+    myArray.join("->") // '40->30->20->15->10'
+    myArray.join("|") // '40|30|20|15|10'
+    myArray.join("😊") // '40😊30😊20😊15😊10'
+
+    // Returns a string representing the specified array and itselements.
+    myArray.toString(); // '40,30,20,15,10'
 
 </script>
 
