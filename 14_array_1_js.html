@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+
+</head>
+<body>
+
+<h1>Arrays</h1>
+
+<script>
+
+    var array1 = [];
+    var array2 = [1, 2, 3, 4, 5, 6, 7];
+    var array3 = [1, 2, 3, "hello", 5, true, function () {}];
+
+    // console.log(array2[5]); // 6
+
+    var numArray = [25, 38, 15, 20, 100, 99, 250, 60];
+
+    function findMax(array) {
+        let max = array[0];
+        for (var i=1; i<array.length; i++) {
+            if(max<array[i]) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
+
+    var max = findMax(numArray);
+    console.log(max);
+
+</script>
+
+</body>
+</html>
