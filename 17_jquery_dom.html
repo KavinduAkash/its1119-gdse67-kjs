@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript</title>
+
+</head>
+<body>
+
+<h1>Hello World 1</h1>
+<h1>Hello World 2</h1>
+<h1>Hello World 3</h1>
+
+<ul id="first-list">
+  <li>Java</li>
+  <li>Python</li>
+  <li>C</li>
+  <li>C++</li>
+  <li>C#</li>
+</ul>
+
+<ul id="second-list">
+  <li>React</li>
+  <li>Angular</li>
+  <li>Vue</li>
+</ul>
+
+<script src="assets/lib/jquery-3.7.1.min.js"></script>
+<script>
+
+  // pure js
+  document.getElementsByTagName("h1")[0].innerText;
+
+  // jQuery
+  $("h1").eq(0).text(); // Hello World 1
+  $("h1").eq(1).text(); // Hello World 2
+  $("h1").eq(2).text(); // Hello World 3
+
+  $("h1").first().text(); // Hello World 1
+  $("h1").last().text(); // Hello World 3
+
+  $("h1").first().text("Welcome to the IJSE"); // Change element inner text
+  $("h1").last().text("Hi"); // Change element inner text
+
+  // $("#first-list>li").eq(2).text('Go');
+  $("#first-list>li:nth-child(2)").text('Go');
+
+  $(document).ready(function () {
+  })
+
+</script>
+
+</body>
+</html>
