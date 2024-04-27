@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript</title>
+
+  <style>
+
+    #bulb {
+      width: 100px;
+      aspect-ratio: 1/1;
+      border: 1px solid gray;
+      border-radius: 100%;
+      margin: 20px 0px;
+    }
+
+    .styles_on {
+      background: yellow;
+      box-shadow: 0px 0px 50px yellow;
+    }
+
+    /*.styles_off {*/
+    /*    background: none;*/
+    /*    box-shadow: none;*/
+    /*}*/
+
+    #box1 {
+      width: 200px;
+      aspect-ratio: 1/1;
+      border: 2px solid dodgerblue;
+      background: lightblue;
+    }
+  </style>
+
+</head>
+<body>
+
+<h1>JS Objects</h1>
+
+<script src="assets/lib/jquery-3.7.1.min.js"></script>
+<script>
+
+  // constructor function
+  function Person(name, age) {
+    // attribute
+    this.name=name;
+    this.age=age;
+  }
+
+  var person = new Person("Kavindu", 28);
+  console.log(person);
+  console.log(person.name);
+  console.log(person.age);
+
+  // class syntax
+  class Person2 {
+    constructor(name, age) {
+      this.name=name;
+      this.age=age;
+    }
+    myMethod1() {
+      console.log("Method 1");
+    }
+    myMethod2() {
+      console.log("Method 2");
+    }
+  }
+
+  var person2 = new Person2("Malith", 28);
+  console.log(person2);
+  person2.myMethod1();
+  person2.myMethod2();
+
+  let person3 = {
+    name: "kavindu",
+    age: 28,
+    address: "panadura",
+    call: () => { console.log("Hello!") }
+  }
+
+  console.log(person3);
+  console.log(person3.name);
+  console.log(person3.age);
+  console.log(person3.address);
+  person3.call();
+
+  // Object.create
+  const Person4 = {
+    hello: () => {
+      console.log("hiiiii!");
+    }
+  }
+  let person4 = Object.create(Person4);
+  console.log(person4);
+  person4.hello();
+
+  // --------------------------------------------
+  let person5 = {
+    name: "Kavindu",
+    age: 28,
+    address: "Panadura"
+  }
+
+  // update values
+  person5.name = "Kalum";
+
+  // add new attribute and value (key-value pair)
+  person5.institute = "IJSE";
+
+  // ---------------------Getter & Setter ---------------------------
+
+  class Person6 {
+    constructor(name, age) {
+      this._name = name;
+      this._age = age;
+    }
+
+    get name() {
+      return this._name;
+    }
+
+    set name(name) {
+      this._name = name + "@ijse.lk";
+    }
+  }
+
+  var person6 = new Person6("kkkk", 18);
+  console.log(person6.name);
+  person6.name = "Kavindu";
+
+  var person7 = {
+    _name: "AAAA",
+    get name() {
+      return this._name;
+    },
+    set name(name) {
+      this._name = name + "@lingoinsitute.lk"
+    }
+  }
+
+  console.log(person7.name);
+  person7.name = "Kavindu";
+
+</script>
+
+</body>
+</html>
