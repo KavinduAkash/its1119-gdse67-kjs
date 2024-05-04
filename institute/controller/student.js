@@ -1,4 +1,6 @@
-var students = [];
+import StudentModel from "../model/StudentModel.js";
+import {students} from "../db/db.js";
+
 var recordIndex;
 
 $('#student-section').css({display: 'block'});
@@ -21,6 +23,7 @@ function loadTable() {
     $("#student-tbl-tbody").empty();
 
     students.map((item, index) => {
+        console.log(item)
         let record = `<tr>
                 <td class="student-id-value">${item.id}</td>
                 <td class="student-firstname-value">${item.firstName}</td>
@@ -40,14 +43,20 @@ $("#student-submit").on('click', () => {
     var studentAddress = $('#address').val();
     var program = $('input[name="flexRadioDefault"]:checked').val();
 
-    // create an object
-    let student = {
-        id: studentId,
-        firstName: studentFirstName,
-        lastName: studentLastName,
-        address: studentAddress,
-        program: program
-    }
+    // create an object - Object Literal
+    // let student = {
+    //     id: studentId,
+    //     firstName: studentFirstName,
+    //     lastName: studentLastName,
+    //     address: studentAddress,
+    //     program: program
+    // }
+
+    // create an object - Class Syntax
+    let student = new StudentModel(
+        studentId, studentFirstName, studentLastName, studentAddress, program
+    );
+
     // push to the array
     students.push(student);
 
