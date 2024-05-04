@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript</title>
+
+</head>
+<body>
+
+<h1>JS Storages</h1>
+
+
+
+<script src="
+https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js
+"></script>
+<script>
+
+  // var name = "kavindu";
+  // localStorage.setItem("name", name);
+  // localStorage.setItem("count", 1000);
+  //
+  // let item = localStorage.getItem("name");
+  // console.log("item: ", item);
+  //
+  // localStorage.removeItem("name");
+
+  // sessionStorage.setItem("institute", "IJSE");
+  //
+  // let sessionStorageItem = sessionStorage.getItem("institute");
+  // console.log(sessionStorageItem);
+  //
+  // sessionStorage.removeItem("institute");
+
+
+  // localStorage.setItem("token", "hello world");
+  // sessionStorage.setItem("country", "SL");
+
+
+
+  // Sat, 4 May 2024 10:25:00 UTC
+  // document.cookie = `name=IJSE; expires=Sat, 4 May 2024 10:29:00 UTC`;
+  // console.log(document.cookie);
+
+
+  Cookies.set("GDSE", "Internet Technologies", {expires: 7});
+  var val = Cookies.get("GDSE");
+  console.log(val);
+
+</script>
+
+</body>
+</html>
