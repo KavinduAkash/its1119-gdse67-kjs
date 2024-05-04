@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript</title>
+
+</head>
+<body>
+
+<h1>JS Timers</h1>
+
+<script>
+
+  var count = 0;
+  var myInterval = null;
+
+  function callMe1() {
+    console.log("Called");
+  }
+
+  function callMe2() {
+    console.log("Called: ", count);
+    ++count;
+    if(count>5) {
+      clearInterval(myInterval);
+    }
+  }
+
+  setTimeout(callMe1, 5000); // 5000ms
+
+  myInterval = setInterval(callMe2, 5000);
+
+</script>
+
+</body>
+</html>
