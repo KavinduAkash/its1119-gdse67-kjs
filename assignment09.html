@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style>
+
+    #boxes {
+      display: flex;
+    }
+
+    #boxes>div {
+      width: 50px;
+      aspect-ratio: 1/1;
+      border: 2px solid red;
+      margin: 5px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #boxes>div>div {
+      width: fit-content;
+      height: fit-content;
+    }
+
+  </style>
+
+</head>
+<body>
+
+
+<section id="boxes">
+  <!--  box no: 1-->
+  <div>
+    <div id="value1">A</div>
+  </div>
+
+  <!--  box no: 2-->
+  <div>
+    <div id="value2">B</div>
+  </div>
+
+  <!--  box no: 3-->
+  <div>
+    <div id="value3">C</div>
+  </div>
+
+  <!--  box no: 4-->
+  <div>
+    <div id="value4">D</div>
+  </div>
+
+  <!--  box no: 5-->
+  <div>
+    <div id="value5">E</div>
+  </div>
+
+  <!--  box no: 6-->
+  <div>
+    <div id="value6">F</div>
+  </div>
+</section>
+
+<button type="button" id="start_btn">Start</button>
+<button type="button" id="stop_btn">Stop</button>
+
+<script src="assets/lib/jquery-3.7.1.min.js"></script>
+<script>
+
+
+  var array = ["A", "B", "C", "D", "E", "F"]; // ["F", "A", "B", "C", "D", "E"]
+
+  var myInterval = null;
+
+  function replaceValues() {
+    // change the array
+    let lastValue = array.pop();
+    array.unshift(lastValue);
+
+    // update the elements
+    $("#value1").text(array[0]);
+    $("#value2").text(array[1]);
+    $("#value3").text(array[2]);
+    $("#value4").text(array[3]);
+    $("#value5").text(array[4]);
+    $("#value6").text(array[5]);
+  }
+
+  $("#start_btn").on("click", () => {
+    myInterval = setInterval(replaceValues, 2000);
+  });
+
+  $("#stop_btn").on("click", () => {
+    clearInterval(myInterval);
+  });
+
+
+</script>
+
+</body>
+</html>
