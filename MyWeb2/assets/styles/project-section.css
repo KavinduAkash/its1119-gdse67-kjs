@@ -1,0 +1,132 @@
+#project-section {
+    text-align: center;
+    padding: 2rem 2rem 6rem 2rem;
+}
+
+#project-section>h2 {
+    margin: 3.5rem 0;
+}
+
+#project-section>.project-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+#project-section>.project-row>.project-card {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    position: relative;
+    border-radius: 10px;
+}
+
+#project-section>.project-row>.project-card>.project-card-overlayer {
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.6;
+    border-radius: 10px;
+}
+
+#project-section>.project-row>.project-card>.project-card-content {
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#project-section>.project-row>.project-card>.project-card-content>h3 {
+    color: white;
+}
+
+#project-section>.project-row>.project-card>.project-card-content .tech-lbl {
+    background: #ff5c40;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+#project-section>.project-row>.project-card>.project-card-content>a>svg {
+    color: gray;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 5px;
+    border: 5px solid #ff5c40;
+    border-radius: 100%;
+    background: white;
+}
+
+#project-row-2 {
+    display: none!important;
+}
+#project-row-3 {
+    display: none!important;
+}
+
+.project-1 {
+    background: url("https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2020/10/thumb_720_450_dreamstime_m_98850547.jpg");
+    background-position: top;
+    background-size: cover;
+}
+
+.project-2 {
+    background: url("https://www.leisureopportunities.co.uk/images/2021/HIGH348753_268555_756308.jpg");
+    background-position: top;
+    background-size: cover;
+}
+
+.project-3 {
+    background: url("https://media.post.rvohealth.io/wp-content/uploads/2019/06/Female_Emotions_732x549-thumbnail.jpg");
+    background-position: top;
+    background-size: cover;
+}
+
+.project-4 {
+    background: url("https://www.dotyeti.com/wp-content/uploads/2018/09/famous-brand-logos-around-the-world-1-1024x577.jpg");
+    background-position: top;
+    background-size: cover;
+}
+
+@media all and (max-width: 1304px){
+    #project-row-1 {
+        display: none!important;
+    }
+    #project-row-2 {
+        display: flex!important;
+    }
+    #project-row-3 {
+        display: flex!important;
+        margin-top: 2rem;
+    }
+}
+
+@media all and (max-width: 1080px){
+    #project-row-3 {
+        margin-top: 1rem;
+    }
+}
+
+@media all and (max-width: 1005px){
+    #project-row-3 {
+        margin-top: 0.5rem;
+    }
+}
+
+@media all and (max-width: 995px){
+    #project-row-1 {
+        display: flex!important;
+        flex-direction: column;
+        align-items: center;
+    }
+    #project-row-1>.project-card {
+        margin: 20px 0;
+    }
+    #project-row-2 {
+        display: none!important;
+    }
+    #project-row-3 {
+        display: none!important;
+    }
+}

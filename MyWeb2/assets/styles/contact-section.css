@@ -1,0 +1,71 @@
+#contact-section {
+    text-align: center;
+    padding: 2rem 2rem 6rem 2rem;
+}
+
+#contact-section>section {
+    width: fit-content;
+    margin: auto;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border: 5px solid #ff253a;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#contact-section>section>div {
+    width: fit-content;
+    height: fit-content;
+}
+
+#contact-section #whatsapp-btn {
+    background: #ff253a;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+}
+
+#contact-section #whatsapp-btn>svg {
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+#contact-section #other-contacts {
+    display: flex;
+    font-size: 20px;
+    width: fit-content;
+    margin: auto;
+}
+
+#contact-section #other-contacts>div {
+    margin: 20px;
+}
+
+#contact-section #other-contacts>div>p>svg {
+    margin-right: 10px;
+}
+
+@media all and (max-width: 665px){
+    #contact-section>section {
+        width: calc(100vw - 150px);
+        justify-content: center;
+    }
+    #contact-section #other-contacts {
+        flex-direction: column;
+    }
+    #contact-section #other-contacts div {
+        margin-bottom: 0;
+    }
+    #contact-section #other-contacts p {
+        margin-bottom: 0;
+    }
+}

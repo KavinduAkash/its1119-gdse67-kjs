@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #pointer {
+            width: 100px;
+            aspect-ratio: 1/1;
+            background: red;
+            position: absolute;
+            background: url("assets/image/shoot.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: none;
+        }
+
+        #target {
+            width: 200px;
+            aspect-ratio: 1/1;
+            background: mediumpurple;
+            position: absolute;
+
+            background: url("assets/image/enemy.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #score-panel {
+            background: black;
+            padding: 20px 40px;
+            color: white;
+            font-size: 20px;
+            width: fit-content;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div id="score-panel">Score: <span id="score">0</span></div>
+
+<div id="pointer"></div>
+
+<div id="target"></div>
+
+<script src="assets/lib/jquery-3.7.1.min.js"></script>
+
+<script>
+
+    var score = 0;
+
+    $(document).on("mousemove", (e) => {
+        console.log("moving-X: ", e.pageX);
+        console.log("moving-Y: ", e.pageY);
+
+        $('#pointer').css({
+            left: e.pageX - 50,
+            top: e.pageY - 50
+        });
+
+    });
+
+    $("#target").on('click', () => {
+        score++;
+        $("#score").text(score);
+    });
+
+    setInterval(() => {
+        $('#target').css({
+            left: `${Math.floor(Math.random() * 100)}vw`,
+            top: `${Math.floor(Math.random() * 100)}vh`
+        });
+    }, 2000)
+
+</script>
+
+</body>
+</html>

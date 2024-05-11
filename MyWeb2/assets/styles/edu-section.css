@@ -1,0 +1,52 @@
+#edu-section {
+    padding: 5rem;
+    text-align: center;
+}
+
+#edu-section > h2 {
+    margin-bottom: 4rem;
+}
+
+#edu-cards {
+    display: flex;
+    justify-content: space-around;
+}
+.edu-card {
+    width: 300px;
+    min-height: 300px;
+    text-align: center;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 10px;
+    border-radius: 8px;
+}
+.edu-card > .icon {
+    width: fit-content;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    background: #ff5c40;
+}
+.edu-card > .icon > svg {
+    font-size: 3rem;
+    color: #ffffff;
+}
+.edu-card > h3 {}
+.edu-card > p {}
+
+
+@media all and (max-width: 1155px){
+    #edu-cards {
+        display: flex;
+        /*width: fit-content;*/
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .edu-card {
+        margin: 20px 0px;
+    }
+}

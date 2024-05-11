@@ -1,0 +1,72 @@
+#hero-section {
+    text-align: center;
+    width: 100%;
+    height: calc(100vh);
+    position: relative;
+}
+
+#bg-video {
+    min-width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+}
+
+#hero-overlayer {
+    background: rgba(35,45,57,0.8);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    /*opacity: 0.2;*/
+}
+
+#hero-section>#hero-content {
+    width: 100vw;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#profile-pic {
+    background: #ff5c40;
+    width: 150px;
+    height: 150px;
+    border: 8px solid orangered;
+    border-radius: 100%;
+    background: url("../images/my-images/akash-image-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#hero-content>h4 {
+    font-size: 3rem;
+    color: white;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Dela Gothic One', cursive;
+    font-family: 'Young Serif', serif;
+    margin: 50px 0;
+}
+#hero-content>h2 {
+    width: fit-content;
+    height: fit-content;
+    font-size: 4rem;
+    color: white;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Dela Gothic One', cursive;
+    font-family: 'Young Serif', serif;
+    margin: 0;
+}
+
+#hero-content>h2>span {
+    color: #ff5c40;
+}
